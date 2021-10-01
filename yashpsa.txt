@@ -1,0 +1,14 @@
+clc;
+clear all;
+d=input("enter diameter");
+r=d/2;
+rad=r*10^(-2);
+D=input("enter distance between conductor");
+r1=rad*0.7788;
+L=2*10^(-7)*log(D/r1);
+L1=L*10^6;
+C=(2*pi*8.854*10^(-12))/(log(D/rad));
+C1=C*10^6;
+fprintf("\nvalue of capacitance=%f micro F",C1);
+fprintf("\nvalue of inductance=%f microhenry",L1);
+plot(C1,L1)
